@@ -9,8 +9,15 @@ function MealsOverview({ route }) {
     return mealItem.categoryIds.includes(catId);
   });
   const renderMeal = (renderItem) => {
-    console.log("renderItem", renderItem);
-    return <MealItem title={renderItem.item.title} />;
+    const item = renderItem.item;
+    const mealItemProp = {
+      title: item.title,
+      imageUrl: item.imageUrl,
+      affordability: item.affordability,
+      duration: item.duration,
+      complexity: item.complexity,
+    };
+    return <MealItem {...mealItemProp} />;
   };
   return (
     <View>
