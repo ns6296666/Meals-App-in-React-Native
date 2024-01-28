@@ -4,6 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MealsOverview from "./screens/MealsOverview";
+import EachMealDetails from "./screens/EachMealDetails";
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,11 @@ export default function App() {
           <Stack.Screen
             name="MealsOverview"
             component={MealsOverview}
+            options={{ headerBackTitle: "Back", title: "Meals Overview" }}
+          />
+          <Stack.Screen
+            name="MealDetails"
+            component={EachMealDetails}
             options={{ headerBackTitle: "Back", title: "Meals Overview" }}
           />
         </Stack.Navigator>

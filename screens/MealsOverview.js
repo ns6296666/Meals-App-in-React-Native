@@ -19,13 +19,14 @@ function MealsOverview({ route, navigation }) {
   const renderMeal = (renderItem) => {
     const item = renderItem.item;
     const mealItemProp = {
+      id: item.id,
       title: item.title,
       imageUrl: item.imageUrl,
       affordability: item.affordability,
       duration: item.duration,
       complexity: item.complexity,
     };
-    return <MealItem {...mealItemProp} />;
+    return <MealItem {...mealItemProp} route={route} />;
   };
   return (
     <View>
