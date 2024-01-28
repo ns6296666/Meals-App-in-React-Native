@@ -17,7 +17,11 @@ function MealItem({ title, imageUrl, duration, complexity, affordability }) {
       >
         <View style={styles.innerContainer}>
           <View>
-            <Image source={{ uri: imageUrl }} style={styles.image} />
+            <Image
+              source={{ uri: imageUrl }}
+              style={styles.image}
+              resizeMode="cover"
+            />
             <Text style={styles.title}>{title}</Text>
           </View>
           <View style={styles.details}>

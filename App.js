@@ -12,9 +12,22 @@ export default function App() {
     <>
       <StatusBar style="dark" />
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          screenOptions={{
+            title: "All Categories",
+            headerStyle: { backgroundColor: "#450f0b" },
+            headerTintColor: "white",
+            contentStyle: {
+              backgroundColor: "#433230",
+            },
+          }}
+        >
           <Stack.Screen name="MealsCategories" component={CategoriesScreen} />
-          <Stack.Screen name="MealsOverview" component={MealsOverview} />
+          <Stack.Screen
+            name="MealsOverview"
+            component={MealsOverview}
+            options={{ headerBackTitle: "Back", title: "Meals Overview" }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
